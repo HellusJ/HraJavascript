@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryGame</title>
+</head>
+<body>
+    <script>
+        console.log("Vítejte ve hře story shooting")
+        console.log("V této hře budete bojovat proti terorismu")
+        let vyberzbrane = prompt("Vyberte zbraň, která vás bude provázet po zbytek hry(AK47, AR15, P90)")
+
+        const dmgAK47 = 20
+        const dmgAR15 = 15
+        const dmgP90 = 10
+        
+        if (vyberzbrane === "AK47"){
+            console.log("Dobrá volba, AK47 je spolihlivá zbraň, jednoduchá na údržbu a má širokou dostupnost na náhradní díly")
+        }else if (vyberzbrane === "AR15"){
+            console.log("Dobrá volba, AR15 je lehká a přesná zbraň, která má velký výběr příslušenství a úprav")
+        }else if (vyberzbrane === "P90"){
+            console.log("Dobrá volba, P90 je lehká zbraň, která umožňuje používat zásobníky s vysokou kapacitou")
+        }
+        
+        let vyberlokace = prompt("Vyberte lokaci, ve které budete bojovat(Pákistán, Nigérie, Somálsko)")
+
+        if (vyberlokace === "Pákistán"){
+            console.log("Pákistán, sice strategickým hráčem v geopolitice, stále čelí terorismu a extremismu, s Al-Káidou jako jedním z hlavních aktérů.")
+            setTimeout(function(){
+                console.log("nyní jste byl přesunut do lokace " + vyberlokace)
+            },4000)
+            console.log("Vaše první mise bude osvobodit rukojmí, jímž je americký doktor Ryan")
+            console.log("Ryan je držen v chatce uprostřed lesa. Chata je hlídána 3 ozbrojenými teroristy")
+            console.log("Ryanův zdravotní stav je neznámý")
+            console.log("Hodně štěstí")
+            let vyberOpp = prompt("")
+
+
+        }else if (vyberlokace === "Nigérie"){
+            console.log("Nigérie je zemí s rozsáhlými přírodními zdroji a bohatou kulturou, ale také čelí výzvám spojeným s terorismem, zejména ze strany skupiny Boko Haram.")
+            setTimeout(function(){
+                console.log("nyní jste byl přesunut do lokace " + vyberlokace)
+            },4000)
+
+            
+        }else if (vyberlokace === "Somálsko"){
+            console.log("Somálsko je zemí s bohatou historií a kulturním dědictvím, avšak trpí dlouhodobým politickým nestabilitou a teroristickými hrozbami, včetně aktivity organizace Al-Shabaab.")
+            setTimeout(function(){
+                console.log("nyní jste byl přesunut do lokace " + vyberlokace)
+            },4000)
+        }
+        
+    </script>
+</body>
+</html>
