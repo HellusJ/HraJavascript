@@ -7,48 +7,93 @@
 </head>
 <body>
     <script>
-        console.log("Vítejte ve hře story shooting")
-        console.log("V této hře budete bojovat proti terorismu")
-        let vyberzbrane = prompt("Vyberte zbraň, která vás bude provázet po zbytek hry(AK47, AR15, P90)")
+        let vyberOpp = 1
+        let ShootOrMele = 1
+        console.log("Vítejte ve hře story shooting kde budete bojovat proti terorismu")
+        console.log("Máte k dispozici ruční tlumenou zbraň Glock 19 s optikou a jeden zásobník navíc(každý zásobník má 6 nábojů) a k tomu bojový nůž")
+        console.log("Celou misi vám bude špionážní dron krýt záda")
+        console.log("Váš počet životů je 40")
 
-        const dmgAK47 = 20
-        const dmgAR15 = 15
-        const dmgP90 = 10
-        
-        if (vyberzbrane === "AK47"){
-            console.log("Dobrá volba, AK47 je spolihlivá zbraň, jednoduchá na údržbu a má širokou dostupnost na náhradní díly")
-        }else if (vyberzbrane === "AR15"){
-            console.log("Dobrá volba, AR15 je lehká a přesná zbraň, která má velký výběr příslušenství a úprav")
-        }else if (vyberzbrane === "P90"){
-            console.log("Dobrá volba, P90 je lehká zbraň, která umožňuje používat zásobníky s vysokou kapacitou")
-        }
-        
+        let pocet_naboju = 6
+        let zivoty = 40
+
         let vyberlokace = prompt("Vyberte lokaci, ve které budete bojovat(Pákistán, Nigérie, Somálsko)")
 
+        //pakistan
         if (vyberlokace === "Pákistán"){
             console.log("Pákistán, sice strategickým hráčem v geopolitice, stále čelí terorismu a extremismu, s Al-Káidou jako jedním z hlavních aktérů.")
-            setTimeout(function(){
-                console.log("nyní jste byl přesunut do lokace " + vyberlokace)
-            },4000)
-            console.log("Vaše první mise bude osvobodit rukojmí, jímž je americký doktor Ryan")
-            console.log("Ryan je držen v chatce uprostřed lesa. Chata je hlídána 3 ozbrojenými teroristy")
-            console.log("Ryanův zdravotní stav je neznámý")
-            console.log("Hodně štěstí")
-            let vyberOpp = prompt("")
-
-
-        }else if (vyberlokace === "Nigérie"){
-            console.log("Nigérie je zemí s rozsáhlými přírodními zdroji a bohatou kulturou, ale také čelí výzvám spojeným s terorismem, zejména ze strany skupiny Boko Haram.")
-            setTimeout(function(){
-                console.log("nyní jste byl přesunut do lokace " + vyberlokace)
-            },4000)
-
+            console.log("nyní jste byl přesunut do lokace " + vyberlokace)
             
+            prompt("Vaše první mise bude osvobodit rukojmí, jímž je americký doktor Ryan")
+            prompt("Ryan je držen v chatce uprostřed lesa. Chata je hlídána 3 ozbrojenými teroristy")
+            prompt("Ryanův zdravotní stav je neznámý")
+            prompt("Po akci vás vyzvedne bojový vrtulník")
+            prompt("Hodně štěstí")
+
+            let vyberOpp = prompt("Zvolte si první cíl (Odstřelovač na střeše - 1, Hlídač dveří - 2, Kulometčík - 3)")
+            if (vyberOpp === "1"){
+                pocet_naboju -= 1
+                let strela = prompt("Odstřelovač zneškodněn, ale všiml si vás kulometčík rychle ho zneškodněte! (zmáčkněte 1 pro střelbu)")
+                if (strela === "1"){
+                    console.log("Zásah, nepřítel zneškodněn, ale dotal jsi ránu do ramena")
+                    zivoty -= 10
+                    pocet_naboju -= 1
+                    console.log("Počet nábojů v zaobníku " + pocet_naboju)
+                    console.log("tvůj počet životů je " + zivoty)
+                    let ShootOrMele = prompt("Váš poslední cíl je hlídač u dveří chcete ho 'zastřelit'? nebo se přiblížit a 'podřezat' ho: ")
+                    if (ShootOrMele === "zastřelit"){
+                        pocet_naboju -= 1
+                        let shoot = prompt("Vedle! Rychle to zkuste znovu: ")
+                        if (shoot === "zastřelit"){
+                            console.log("Zásah, to bylo těsné")
+                            pocet_naboju -= 1
+                            console.log("Gratuluju, vaše první mise byla ůspěšná")
+                        }
+                    if (ShootOrMele === "podřezat"){
+                        console.log("To bylo chytré, neztratil jsi náboje na příští mise a neztratil jsi žádný život")
+                        console.log("Gratuluju, vaše první mise byla ůspěšná")
+                    }
+                }
+                }
+            }
+            }
+
+            if (vyberOpp === 2){
+                pocet_naboju -= 1
+                prompt("Dobrá práce, na takovou dálku bych si ani já neveřil a ani jsi nebyl zpozorován")
+                let strela = prompt("*krch*'Tady velitel, pospěš is odstřelovač mění pozici, rychle se schovej za ten sud a poté ho podřež'(Zmáčkni 1 pro podřezání)")
+                if (strela === "1"){
+                    let Shoot = prompt("Odstřelovač neměl šanci už zbývá jenom kulometčík (1 pro zabití kulometčíka)")
+                    if (Shoot === "1"){
+                        pocet_naboju -= 3
+                        console.log("Dvě rány do hrudníku a jedna do hlavy, tak má být, jdi pro Ryana a vypadněte")
+                        console.log("Váš momentální počet životů " + zivoty)
+                        console.log("Váš momentální počet nábojů " + pocet_naboju)
+                    }
+                }
+            }
+
+            if (vyberOpp === 3){
+                pocet_naboju -= 1
+                prompt("vedle! a máme problém, kulometčík to do tebe těžce pere")
+                prompt("už jsi schytal tři rány, poslední rána a končíš")
+                zivoty -= 30
+                let zachrana = prompt("*Krch*'tady velitel, zabij toho u dveří, vem dokotra a zmizni od tamtud, do tří minut to pokropí letectvo'(1 - pro záchranu)")
+                if (zachrana === "1"){
+                    console.logs("Tak tohle bylo velmi těsné, doktor je naštěstí v pořádku")
+                }
+            }
+        
+        //nigerie
+        else if (vyberlokace === "Nigérie"){
+            console.log("Nigérie je zemí s rozsáhlými přírodními zdroji a bohatou kulturou, ale také čelí výzvám spojeným s terorismem, zejména ze strany skupiny Boko Haram.")
+            console.log("nyní jste byl přesunut do lokace " + vyberlokace)
+            
+        //somalsko
         }else if (vyberlokace === "Somálsko"){
             console.log("Somálsko je zemí s bohatou historií a kulturním dědictvím, avšak trpí dlouhodobým politickým nestabilitou a teroristickými hrozbami, včetně aktivity organizace Al-Shabaab.")
-            setTimeout(function(){
-                console.log("nyní jste byl přesunut do lokace " + vyberlokace)
-            },4000)
+            console.log("nyní jste byl přesunut do lokace " + vyberlokace)
+            
         }
         
     </script>
