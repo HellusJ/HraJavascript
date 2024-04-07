@@ -76,12 +76,12 @@
                     }
                 }
             }
-            console.log("URČITĚ NEZAPOMEŇTE SI HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE")
+            console.log("URČITĚ NEZAPOMEŇTE SI HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE A JINÉ MOŽNOSTI")
          
         //nigerie
         if (vyberlokace === "Nigérie"){
             console.log("Nigérie je zemí s rozsáhlými přírodními zdroji a bohatou kulturou, ale také čelí výzvám spojením s terorismem, zejména ze strany skupiny Boko Haram.")
-            console.log("URČITĚ NEZAPOMEŇTE SI HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE")
+            console.log("URČITĚ NEZAPOMEŇTE SI HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE A JINÉ MOŽNOSTI")
         }
 
         //somalsko
@@ -109,7 +109,7 @@
                 if (vyberOpp2 === "1"){
                     let zabitivpravo = prompt("Vybral sis toho vpravo, zkus rychle vykouknout a 'zastřelit' ho")
                     if (zabitivpravo === "zastřelit"){
-                        console.log("Výborn- *Zap* Co to bylo? *Krch* Tady Tony dostal jsem toho druhého, běž to odpálit a padáme")
+                        console.log("Výborn- *PIF* Co to bylo? *Krch* Tady Tony dostal jsem toho druhého, běž to odpálit a padáme")
                     }
                 }
                 if (vyberOpp2 === "2"){
@@ -118,10 +118,27 @@
                         console.log("Ale ne, minul jsi a teď jsi v maléru")
                         console.log("Tony ti už naštstí běží na pomoc")
                         console.log("Jsou tak 40 metrů od tebe, můžeš ho zkusit znova zastřeli- *BOOM* Tady Tony, odpálil jsem ty tanky tak odtud vypad- *PÍP*")
-                    }//zde budu pokracovat
+                        console.log("Tony?!... Tony?!... Je po Tonym")
+                        let shoot2 = prompt("Teď máš ale šanci je znova 'zastřelit' dokud nedávají pozor")
+                        if (shoot2 === "zastřelit"){
+                            console.log("Trefa už zbývá jenom jeden")
+                            let ShootOrMele2 = prompt("Teď máš na výběr: buď se přes ten kouř můžeš přiblížit k nepřáteli, 'podřezat' ho, vzít Tonyho tělo a vypdnout, ale riskuješ, že si tě všimne a sejme tě nebo ho 'zastřelit' riskovat že se netrefíš a Tonyho tam necháš")
+                            if (ShootOrMele2 === "podřezat"){
+                                console.log("*ŠKRRR* Je po něm, vem Tonyho a zmizněte dnes už toho bylo dost")
+                            }
+                            if (ShootOrMele2 === "zastřelit"){
+                                let dorazeni = prompt("Trefa, ale trefil ses do nohy a cíl je pořád střelby schopen, zkus ho 'dorazit'")
+                                if (dorazeni === "dorazit"){
+                                    console.log("Trefa, cíl zneškodněn vem Ton- Co to je? To snad ne zasáhl tě do ramena")
+                                    console.log("Tonyho tam musíš nechat, neuneseš ho s tím zraněním")
+                                    console.log("Tak už zmiz než vykrvácíš")
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            console.log("URČITĚ SI NEZAPOMEŇTE HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE")
+            console.log("URČITĚ SI NEZAPOMEŇTE HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE A JINÉ MOŽNOSTI")
         }
         
     </script>
