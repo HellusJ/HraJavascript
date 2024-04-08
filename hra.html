@@ -53,7 +53,7 @@
                 
                 if (vyberOpp === 2){
                     prompt("Dobrá práce, na takovou dálku bych si ani já neveřil a ani jsi nebyl zpozorován")
-                    let strela = prompt("*krch*'Tady velitel, pospěš is odstřelovač mění pozici, rychle se schovej za ten sud a poté ho podřež'(Zmáčkni 1 pro podřezání)")
+                    let strela = prompt("*krch* Tady velitel, pospěš is odstřelovač mění pozici, rychle se schovej za ten sud a poté ho podřež (Zmáčkni 1 pro podřezání)")
                     if (strela === "1"){
                         let Shoot = prompt("Odstřelovač neměl šanci už zbývá jenom kulometčík (1 pro zabití kulometčíka)")
                         if (Shoot === "1"){
@@ -81,6 +81,77 @@
         //nigerie
         if (vyberlokace === "Nigérie"){
             console.log("Nigérie je zemí s rozsáhlými přírodními zdroji a bohatou kulturou, ale také čelí výzvám spojením s terorismem, zejména ze strany skupiny Boko Haram.")
+
+            prompt("V této misi vás čeká průzkum nepřátelského území")
+            prompt("Potřebujeme zjistit kolik mají bojového materiálu")
+            prompt("Z letadla jsme zjistily, že jejich základna se skládá ze 2 budov. Co je v nich ale nevíme")
+            prompt("Počet nepřátel je neznámý")
+            prompt("To bude tvým úkolem jak už jsem zmínil")
+            prompt("Jakmile budeš hotov, tak se přesuneš k řece, kde tě vyzvednou 2 bojové čluny")
+            prompt("Budeš v tom sám. Hodně štěstí, budeš ho potřebovat")
+
+            console.log("Dostal jsi se na místo")
+            console.log("vypadá to, že zde nidko zatím není")
+
+            let vyberbudov = prompt("Nyní si vyber mezi budovou '1' nebo '2'")
+            if (vyberbudov === "1"){
+                console.log("Vypadá to, že tato budova je zásobárna jídla a pitné vody. Je tu docela tma,ale na štěstí tu nikdo není")
+                let vyberbudov2 = prompt("Nyní se běž podívat do budovy '2'")
+                if (vyberbudov2 === "2")
+                    console.log("Tato budova vypadá něco jako ubytovna, ale ne! je tu nejaký chlap, který spí")
+                let shootOrMele3 = prompt("Nezbývá ti nic jiného, než ho potichu 'zabít' nožem ")
+                if (shootOrMele3 === "zabít"){
+                    console.log("Je po něm, pokrčuj v průzkumu")
+                    console.log("Počkat co to je?")
+                    let otevritpoklop = prompt("Právě si našel poklop v podlaze, chceš ho 'prozkoumat'? nebo 'ne'")
+                    if (otevritpoklop === "ne"){
+                        console.log("Dobrá, pokračuj v průzkumu")
+                    }
+                    if (otevritpoklop === "prozkoumat"){
+                        console.log("vypadá to, že zde nic není jenom zdi od krve a nějaké injekce jednu si vem pro vzorky, nejspíš jedou na kokainu")
+                        console.log("Je na čase odtud vypadnout, už tu nic není")
+                    }
+                }
+                console.log("Nejspíš jsou vetšina z nich pryč, protože je u každé postele zásobník a oblečení")
+                console.log("Lokace byla úspěšně prozkoumána a tím končí tvoje mise takže být tebou tak jdu k řece")
+            }
+            if (vyberbudov === "2"){
+                console.log("Tato budova vypadá něco jako ubytovna, ale ne! je tu nejaký chlap, který spí")
+                let shootOrMele3 = prompt("Nezbývá ti nic jiného, než ho potichu 'zabít' nožem ")
+                if (shootOrMele3 === "zabít"){
+                    console.log("Je po něm, pokrčuj v průzkumu")
+                    console.log("Počkat co to je?")
+                    let otevritpoklop = prompt("Právě si našel poklop v podlaze, chceš ho 'prozkoumat'? nebo 'ne'")
+                    if (otevritpoklop === "ne"){
+                        console.log("Dobrá, pokračuj v průzkumu")
+                    }
+                    if (otevritpoklop === "prozkoumat"){
+                        console.log("vypadá to, že zde nic není jenom zdi od krve a nějaké injekce jednu si vem pro vzorky, nejspíš jedou na kokainu")
+                        console.log("Je na čase jít do další bodovy")
+                    }
+                    console.log("Vypadá to, že budova má zadní vchod, jdi tudyma")
+                    let granat = prompt("Ale ne jsou tu 4 chalpi, rychle tam musíš 'hodit' granát a utéct")
+                    if (granat === "hodit"){
+                        console.log("*BOOM* Vypadá to, že jednomu se podařilo utéct z budovy ještě před výbuchem")
+                        let uprchlik = prompt("Zkus ho 'zastřelit'")
+                        if (uprchlik === "zastřelit"){
+                            console.log("Vedle zkus to rychle znovu")
+                            let uprchlik = prompt("Zkus ho 'zastřelit'")
+                            if (uprchlik === "zastřelit"){
+                                console.log("Trefa, teď se běž podívat co zbylo v té budově kromě 3 těl")
+                                console.log("Počkat proč tu jsou jenom dva... *PIF* Pozor je za tebou")
+                                let zabitposledniho = prompt("Netrefil se rychle ho zkus 'zabít'")
+                                if (zabitposledniho === "zabít"){
+                                    console.log("Trefa do oka krása")
+                                }
+                                console.log("Vypadá to, že je to budova se zásobami pitné vody a jídla")
+                                console.log("Nic moc toho ti vychrtlíci nemají")
+                                console.log("Zvládl jsi to bez jediného zranění, tak se zbal a jdi k řece, ať můžeš jet do bezpečí")
+                            }
+                        }
+                    }
+                }
+            }
             console.log("URČITĚ NEZAPOMEŇTE SI HRU ZAHRÁT ZNOVU A VYKOUŠEJTE SI DALŠÍ LOKACE A JINÉ MOŽNOSTI")
         }
 
